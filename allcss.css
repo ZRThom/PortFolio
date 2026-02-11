@@ -31,9 +31,18 @@
     height: 65px;
 }
 
-.spanPortFolio
+.header-left
 {
-    
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.classPortFolio
+{
+    color: white;
+    font-size: 25px;
+    margin-left: -5px;
 }
 
 
