@@ -17,6 +17,12 @@
 {
     color: white;
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+}
+
+.space1:hover
+{
+    color: #aa7e45;
 }
 
 .divH 
@@ -434,6 +440,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 body {
@@ -476,6 +483,11 @@ body {
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 }
 
+.hoverBtn:hover
+{
+    color: #aa7e45;
+}
+
 footer a {
     color: black;
     text-decoration: none;
@@ -496,29 +508,42 @@ footer a {
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 }
 
-/* links */
-#links {
+#links
+{
+    position: absolute;
+    right: 300px;
+    bottom: 40px;
     display: flex;
-    gap: 25px;
-    justify-content: flex-end;
-    align-items: center;
-    width: 85%;
-    max-width: 1200px;
-    margin: 0 auto 10px auto;
-    
+    gap: 40px
 }
 
-.linka {
-    width: 70px;
-    height: 35px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s;
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5);
+/* links */
+#links .social-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
 }
 
-.linka:hover {
+#links .social-btn:hover
+{
     transform: scale(1.2);
+    background: rgba(194, 173, 83, 0.5);
+    box-shadow: 0 0 30px rgba(255,255,255,0.5);
+}
+
+#links .linka
+{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
 }
 
 footer hr { 
