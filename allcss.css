@@ -31,6 +31,11 @@
     height: 65px;
 }
 
+.spanPortFolio
+{
+    
+}
+
 
 
 
@@ -74,14 +79,14 @@ body.bg-panel::before
     left: 50%;
     width: 500px;
     height: 100vh;
-    background: rgba(0,0,0,0.5);
-    box-shadow: 0 0 40px rgba(0,0,0,1);
+    background: rgba(87, 72, 32, 0.5);
+    box-shadow: 0 0 40px rgb(99, 71, 38);
     z-index : 1;
     transform: translateX(-50%);
     pointer-events: none;
 }
 
-.main-header, .content, section, footer
+.main-header, .content, .mainPageProfil,  section, footer
 {
     position: relative;
     z-index: 2;
