@@ -173,7 +173,38 @@ body.bg-panel::before
     margin: 0;
     font-size: 20px;
     line-height: 1.5;
-}   
+}
+
+.project-card
+{
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.project-tags
+{
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 60%;
+}
+
+.tag
+{
+    position: relative;
+    padding: 5px 15px;
+    font-size: 17px;
+    line-height: 1;
+    color: white;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(167, 143, 74, 0.5);
+}
+
 
 @media (max-width: 700px)
 {
