@@ -1,15 +1,16 @@
 /* Header */
 .main-header 
 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 60px;
-  background-color: rgb(95, 95, 95);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background-color: rgb(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    flex-wrap: wrap;
+    color: #ffffff;
 }
 
 .space1
@@ -19,23 +20,26 @@
 
 .divH 
 {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
 }   
 
 .logohead 
 {
-  height: 65px;
+    height: 65px;
 }
+
+
 
 
 
 /* body */
 html, body
 {
-    height: 100%;
     margin: 0;
+    min-height: 100%;
 }
 
 body
@@ -44,14 +48,22 @@ body
     overflow-x: hidden;
 }
 
-video.bg
-{
+.bg-wrap{
     position: fixed;
     inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.bg-wrap video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 110%;
+    height: 110%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
 }
 
 body.bg-panel::before
@@ -63,13 +75,13 @@ body.bg-panel::before
     width: 500px;
     height: 100vh;
     background: rgba(0,0,0,0.5);
-    box-shadow: 0 0 40px rgba(0,0,0,100);
+    box-shadow: 0 0 40px rgba(0,0,0,1);
     z-index : 1;
     transform: translateX(-50%);
     pointer-events: none;
 }
 
-.main-header, .content, footer
+.main-header, .content, section, footer
 {
     position: relative;
     z-index: 2;
@@ -107,12 +119,75 @@ body.bg-panel::before
     margin-left: 800px;
 }
 
-.imgProfil
-{
 
+
+
+
+/* project card */
+.projects
+{
+    width: min(900px, 90%);
+    margin: 60px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px
 }
 
+.project-card
+{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(56, 56, 56, 0.5);
+    box-shadow: 0 10px 35px rgba(56, 56, 56, 0.5);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transform-origin: center;
+}
 
+.project-card:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+}
+
+.project-img
+{
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+.project-text h3
+{
+    margin: 0 0 10px 0;
+    font-size: 30px;
+}
+
+.project-text p
+{
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
+}   
+
+@media (max-width: 700px)
+{
+    .project-card
+    {
+        flex-direction: column;
+        text-align: left;
+    }
+    .project-img
+    {
+        width: 100%;
+        height: 200px;
+    }
+}
 
 
 
@@ -124,7 +199,7 @@ footer {
     margin: 0;
     margin-top: 100px;
     padding: 0;
-    background-color: rgb(143, 143, 143);
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -159,6 +234,7 @@ body {
     width: 30%;
     min-width: 250px;
     margin-left: 20px;
+    color: #ffffff;
 }
 
 /* mid case */
@@ -168,6 +244,7 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     width: 20%;
+    color: #ffffff;
 }
 
 footer a {
@@ -175,16 +252,18 @@ footer a {
     text-decoration: none;
     margin-bottom: 8px;
     transition: color 0.3s;
+    color: #ffffff;
 }
 
 .space1, footer a:hover {
-    color: #ff3b3b;
+    color: #ffffff;
 }
 
 /* right case */
 .tabl2 {
     width: 25%;
     margin-left: 50px;
+    color: #ffffff;
 }
 
 /* links */
@@ -196,14 +275,16 @@ footer a {
     width: 85%;
     max-width: 1200px;
     margin: 0 auto 10px auto;
+    
 }
 
 .linka {
-    width: 40px;
-    height: 30px;
+    width: 70px;
+    height: 35px;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5);
 }
 
 .linka:hover {
@@ -211,10 +292,11 @@ footer a {
 }
 
 footer hr { 
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 255);
     width: 90%;
     margin-top: 0;
     margin-bottom: 10px;
+    
 }
 
 #endf {
@@ -222,4 +304,5 @@ footer hr {
     justify-content: center;
     font-size: 13px;
     margin-top: 0;
+    color: #ffffff;
 }
