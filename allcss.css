@@ -16,6 +16,7 @@
 .space1
 {
     color: white;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 }
 
 .divH 
@@ -42,6 +43,7 @@
 {
     color: white;
     font-size: 20px;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 }
 
 
@@ -87,8 +89,8 @@ body.bg-panel::before
     left: 50%;
     width: 500px;
     height: 100vh;
-    background: rgba(87, 72, 32, 0.5);
-    box-shadow: 0 0 40px rgb(99, 71, 38);
+    background: rgba(36, 30, 13, 0.5);
+    box-shadow: 0 0 40px rgb(58, 41, 22);
     z-index : 1;
     transform: translateX(-50%);
     pointer-events: none;
@@ -106,6 +108,7 @@ body.bg-panel::before
     padding-top: 50px;
     margin-left: 50px;
     font-size: 70px;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 }
 
 .h2A
@@ -113,23 +116,71 @@ body.bg-panel::before
     color: rgb(218, 218, 218);
     display: flex;
     justify-content: center;
-    font-size: 50px  ;
+    font-size: 50px;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.mainPageProfil
+{
+    width: min(1100px, 90%);
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.profil-row
+{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profil-row:nth-child(even)
+{
+    flex-direction: row-reverse;
+}
+
+.imgProfil
+{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    flex-shrink: 0;
+}
+
+.profil-box
+{
+    padding: 20px 20px;
+    border-radius: 20px;
+    background: rgba(49, 49, 49, 0.5);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .s1
 {
+    margin: 0;
+    font-size: 25px;
+    line-height: 1.5;
     color: rgb(218, 218, 218);
-    font-size: 30px;
-    margin-top: 100px;
-    margin-left: 350px;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
 }
 
-.s2
+@media (max-width: 800px)
 {
-    color: rgb(218, 218, 218);
-    font-size: 30px;
-    margin-top: 100px;
-    margin-left: 800px;
+    .profil-row, .profil-row:nth-child(even)
+    {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .imgProfil
+    {
+        width: 100%;
+        height: 220px;
+    }
 }
 
 
@@ -154,7 +205,7 @@ body.bg-panel::before
     gap: 25px;
     padding: 20px;
     border-radius: 20px;
-    background: rgba(56, 56, 56, 0.5);
+    background: rgba(34, 34, 34, 0.9);
     box-shadow: 0 10px 35px rgba(56, 56, 56, 0.5);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     transform-origin: center;
@@ -188,29 +239,29 @@ body.bg-panel::before
     line-height: 1.5;
 }
 
-.project-card
+.project-text
 {
-    position: relative;
-    padding-bottom: 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-tags
 {
-    position: absolute;
-    right: 20px;
-    bottom: 15px;
+    margin-top: auto;
+    padding-top: 15px;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    max-width: 60%;
+    justify-content: flex-start;
+    align-self: stretch;
 }
 
 .tag
 {
     position: relative;
     padding: 5px 15px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1;
     color: white;
     background: rgba(0, 0, 0, 0.9);
@@ -218,6 +269,31 @@ body.bg-panel::before
     box-shadow: 0 5px 15px rgba(167, 143, 74, 0.5);
 }
 
+.project-media
+{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.github-box
+{
+    display: block;
+    width: 110px;
+    padding: 10px 1px;
+    border-radius: 10px;
+    background: rgba(88, 69, 34, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.185);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.github-box:hover
+{
+    background: rgba(0, 0, 0, 0.068);
+}
 
 @media (max-width: 700px)
 {
@@ -231,6 +307,107 @@ body.bg-panel::before
         width: 100%;
         height: 200px;
     }
+    .github-box{
+        width: 100%;
+    }
+}
+
+
+
+
+/* contact */
+.contactArt
+{
+    width: min(1100px, 90%);
+    margin: 60px auto;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.contact-card
+{
+    color: white;
+    width: 300px;
+    min-height: 200px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(34, 34, 34, 0.9);
+    box-shadow: 0 10px 35px rgba(56, 56, 56, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.contact-card > *
+{
+    position: relative;
+    z-index: 2;
+}
+
+.contact-title
+{
+    margin: 0;
+    font-size: 30px;
+}
+
+.contact-desc
+{
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.contact-btn
+{
+    display: block;
+    width: 110px;
+    padding: 10px 1px;
+    border-radius: 10px;
+    background: rgba(88, 69, 34, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.185);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.contact-btn:hover
+{
+    background: rgba(0, 0, 0, 0.068);
+}
+
+.contact-card::before
+{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(135deg,
+    rgba(34,34,34,0) 0%,
+    rgba(34,34,34,0) 18%,
+    rgba(255, 90,  0, 0.12) 28%,
+    rgba(255, 140, 0, 0.35) 40%,
+    rgba(255, 200, 80, 0.30) 50%,
+    rgba(255, 140, 0, 0.35) 60%,
+    rgba(255, 90,  0, 0.12) 72%,
+    rgba(34,34,34,0) 100%
+    );
+    background-size: 220% 220%;
+    background-position: 0% 0%;
+    opacity: 0;
+    transition: opacity .25s ease, background-position .9s ease;
+}
+
+.contact-card:hover::before
+{
+    opacity: 1;
+    background-position: 100% 100%;
 }
 
 
