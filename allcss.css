@@ -113,13 +113,13 @@ body.bg-panel::before {
     background-image:
 
         linear-gradient(
-            rgba(255, 196, 0, 0.045) 1px,
+            rgba(255, 196, 0, 0.1) 1px,
             transparent 1px
         ),
 
         linear-gradient(
             90deg,
-            rgba(255, 42, 0, 0.045) 1px,
+            rgba(255, 42, 0, 0.1) 1px,
             transparent 1px
         );
 
